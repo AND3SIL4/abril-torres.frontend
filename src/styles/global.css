@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Abril Torres brand colors */
+  --background: #f2efe4; /* Cream background */
+  --foreground: #591b20; /* Dark burgundy text */
+  --card: #ffffff;
+  --card-foreground: #591b20;
+  --primary: #732229; /* Primary burgundy */
+  --primary-foreground: #f2efe4;
+  --secondary: #d9c9c7; /* Dusty rose */
+  --secondary-foreground: #591b20;
+  --muted: #d9c9c7;
+  --muted-foreground: #a67676; /* Muted rose */
+  --accent: #a67676;
+  --accent-foreground: #f2efe4;
+  --border: #d9c9c7;
+  --ring: #732229;
+}
+
+@theme inline {
+  --font-sans: 'Cormorant Garamond', 'Georgia', 'serif';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
