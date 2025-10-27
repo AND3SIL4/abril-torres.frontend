@@ -1,75 +1,109 @@
 ---
+// Component for displaying featured products
+
 const products = [
   {
     id: 1,
-    name: "Luna Tote",
-    price: "$185.000 COP",
-    image: "/elegant-burgundy-tote-bag-recycled-fabric.jpg",
-     description: "Tote espacioso para el día a día",
+    name: 'Luna Tote',
+    price: '$185.000 COP',
+    image: '/images/elegant-burgundy-tote-bag-recycled-fabric.jpg',
+    description: 'Tote espacioso para el día a día',
   },
   {
     id: 2,
-    name: "Stella Crossbody",
-    price: "$145.000 COP",
-    image: "/dusty-rose-crossbody-bag-sustainable-fabric.jpg",
-     description: "Compacto y versátil",
+    name: 'Stella Crossbody',
+    price: '$145.000 COP',
+    image: '/images/dusty-rose-crossbody-bag-sustainable-fabric.jpg',
+    description: 'Compacto y versátil',
   },
   {
     id: 3,
-    name: "Aurora Clutch",
-    price: "$95.000 COP",
-    image: "/cream-elegant-clutch-bag-recycled-material.jpg",
-     description: "Sofisticación nocturna",
+    name: 'Aurora Clutch',
+    price: '$95.000 COP',
+    image: '/images/cream-elegant-clutch-bag-recycled-material.jpg',
+    description: 'Sofisticación nocturna',
   },
   {
     id: 4,
-    name: "Nova Shoulder Bag",
-    price: "$165.000 COP",
-    image: "/muted-rose-shoulder-bag-eco-friendly.jpg",
-     description: "Silueta clásica",
+    name: 'Nova Shoulder Bag',
+    price: '$165.000 COP',
+    image: '/images/muted-rose-shoulder-bag-eco-friendly.jpg',
+    description: 'Silueta clásica',
   },
 ];
+import ModelViewer from './ModelViewer.jsx';
 ---
 
 <section id="collection" class="py-20 md:py-32">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-       <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4">
-         <span class="font-semibold text-primary">Colección</span> Destacada
-       </h2>
-       <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-         Cada pieza cuenta una historia de transformación: de telas descartadas a accesorios apreciados.
+      <h2
+        class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4"
+      >
+        <span class="font-semibold text-primary">Colección</span> Destacada
+      </h2>
+      <p
+        class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+      >
+        Cada pieza cuenta una historia de transformación: de telas descartadas a
+        accesorios apreciados.
        </p>
-    </div>
+     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-      {products.map((product) => (
-        <div class="group overflow-hidden border border-border rounded-lg hover:shadow-lg transition-shadow duration-300 bg-card">
-          <div class="relative aspect-[4/5] overflow-hidden">
-            <img
-              src={product.image || "/placeholder.svg"}
-              alt={product.name}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-1 text-foreground">{product.name}</h3>
-            <p class="text-sm text-muted-foreground mb-3">{product.description}</p>
-            <div class="flex items-center justify-between">
-              <span class="text-lg font-semibold text-primary">{product.price}</span>
-               <button class="text-sm px-4 py-2 text-primary hover:text-primary-foreground hover:bg-primary rounded-md transition-colors">
-                 Ver Detalles
-               </button>
+     <!-- 3D Model Viewer Section -->
+     <div class="mb-16">
+       <div class="text-center mb-8">
+         <h3 class="text-2xl md:text-3xl font-light mb-4">Explora en 3D</h3>
+         <p class="text-muted-foreground">Descubre nuestros diseños desde todos los ángulos</p>
+       </div>
+        <div class="max-w-4xl mx-auto">
+          <ModelViewer
+            src="/models/test.glb"
+            alt="Bolso azul en 3D"
+            style="width: 100%; height: 1200px; border-radius: 8px;"
+            client:load
+          />
+        </div>
+     </div>
+
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {
+        products.map((product) => (
+          <div class="group overflow-hidden border border-border rounded-lg hover:shadow-lg transition-shadow duration-300 bg-card">
+            <div class="relative aspect-[4/5] overflow-hidden">
+              <img
+                src={product.image || '/placeholder.svg'}
+                alt={product.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1 text-foreground">
+                {product.name}
+              </h3>
+              <p class="text-sm text-muted-foreground mb-3">
+                {product.description}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-semibold text-primary">
+                  {product.price}
+                </span>
+                <button class="text-sm px-4 py-2 text-primary hover:text-primary-foreground hover:bg-primary rounded-md transition-colors">
+                  Ver Detalles
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
 
     <div class="text-center mt-12">
-       <button class="px-8 py-3 text-base font-medium rounded-md border border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent transition-colors">
-         Ver Todos los Productos
-       </button>
+      <button
+        class="px-8 py-3 text-base font-medium rounded-md border border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent transition-colors"
+      >
+        Ver Todos los Productos
+      </button>
     </div>
   </div>
 </section>

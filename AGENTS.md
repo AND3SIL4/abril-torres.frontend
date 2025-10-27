@@ -13,6 +13,14 @@ Configure social media links in `.env` file:
 - `PUBLIC_FACEBOOK_URL`: Facebook page URL
 - `PUBLIC_EMAIL_URL`: Contact email (mailto: format)
 
+## 3D Models
+- **Model files**: Store in `/public/models/` directory
+- **Recommended format**: GLTF/GLB for better web performance than OBJ
+- **File size limit**: Keep under 5MB for optimal loading
+- **Current issue**: `blue-handbag.glb` (50MB) is still too large for web rendering
+- **Optimization tools**: Use Blender, Meshlab, or online converters to reduce polygon count and file size
+- **JSON Error Fix**: Convert OBJ to GLTF/GLB to avoid JSON parsing errors
+
 ## Code Style
 - **Components**: PascalCase naming, `.astro` extension
 - **Imports**: Group by type (Astro imports first, then components)
