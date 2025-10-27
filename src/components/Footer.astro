@@ -1,5 +1,8 @@
 ---
 // Footer component
+const instagramUrl = import.meta.env.PUBLIC_INSTAGRAM_URL || '#';
+const facebookUrl = import.meta.env.PUBLIC_FACEBOOK_URL || '#';
+const emailUrl = import.meta.env.PUBLIC_EMAIL_URL || '#';
 ---
 
 <footer id="contact" class="bg-card border-t border-border">
@@ -14,85 +17,85 @@
           height="80"
           class="h-16 w-auto mb-4"
         />
-        <p class="text-muted-foreground leading-relaxed mb-6 max-w-md">
-          Sustainable luxury handbags crafted from recycled fabrics. Each piece is a testament to conscious design and timeless elegance.
-        </p>
-        <div class="flex gap-4">
-          <button class="p-2 text-muted-foreground hover:text-primary transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-            </svg>
-            <span class="sr-only">Instagram</span>
-          </button>
-          <button class="p-2 text-muted-foreground hover:text-primary transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-            <span class="sr-only">Facebook</span>
-          </button>
-          <button class="p-2 text-muted-foreground hover:text-primary transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-            <span class="sr-only">Email</span>
-          </button>
-        </div>
+         <p class="text-muted-foreground leading-relaxed mb-6 max-w-md">
+           Bolsos de lujo sostenible elaborados con telas recicladas. Cada pieza es un testimonio del diseño consciente y la elegancia atemporal.
+         </p>
+         <div class="flex gap-4">
+           <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="p-2 text-muted-foreground hover:text-primary transition-colors">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+             </svg>
+             <span class="sr-only">Instagram</span>
+           </a>
+           <a href={facebookUrl} target="_blank" rel="noopener noreferrer" class="p-2 text-muted-foreground hover:text-primary transition-colors">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+             </svg>
+             <span class="sr-only">Facebook</span>
+           </a>
+           <a href={emailUrl} class="p-2 text-muted-foreground hover:text-primary transition-colors">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <rect width="20" height="16" x="2" y="4" rx="2"/>
+               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+             </svg>
+             <span class="sr-only">Email</span>
+           </a>
+         </div>
       </div>
 
       <!-- Shop -->
       <div>
-        <h3 class="text-lg font-semibold mb-4 text-foreground">Shop</h3>
+         <h3 class="text-lg font-semibold mb-4 text-foreground">Tienda</h3>
         <ul class="space-y-3">
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              All Products
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              New Arrivals
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              Best Sellers
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              Gift Cards
-            </a>
-          </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Todos los Productos
+             </a>
+           </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Nuevas Llegadas
+             </a>
+           </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Más Vendidos
+             </a>
+           </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Tarjetas de Regalo
+             </a>
+           </li>
         </ul>
       </div>
 
       <!-- About -->
       <div>
-        <h3 class="text-lg font-semibold mb-4 text-foreground">About</h3>
+         <h3 class="text-lg font-semibold mb-4 text-foreground">Acerca de</h3>
         <ul class="space-y-3">
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              Our Story
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              Sustainability
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              Craftsmanship
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-              Contact Us
-            </a>
-          </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Nuestra Historia
+             </a>
+           </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Sostenibilidad
+             </a>
+           </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Artesanía
+             </a>
+           </li>
+           <li>
+             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
+               Contáctanos
+             </a>
+           </li>
         </ul>
       </div>
     </div>
@@ -100,15 +103,15 @@
     <!-- Newsletter -->
     <div class="border-t border-border pt-12 mb-12">
       <div class="max-w-md mx-auto text-center">
-        <h3 class="text-2xl font-light mb-2 text-foreground">Stay Connected</h3>
-        <p class="text-muted-foreground mb-6">
-          Subscribe to receive updates on new collections and exclusive offers.
-        </p>
+         <h3 class="text-2xl font-light mb-2 text-foreground">Mantente Enterado de las Ultimas Actualizaciones</h3>
+         <p class="text-muted-foreground mb-6">
+           Suscríbete para recibir actualizaciones sobre nuevas colecciones y ofertas exclusivas.
+         </p>
         <form class="flex gap-2">
-          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
-          <button type="submit" class="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-            Subscribe
-          </button>
+           <input type="email" placeholder="Ingresa tu correo electrónico" class="flex-1 px-4 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+           <button type="submit" class="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
+             Suscribirse
+           </button>
         </form>
       </div>
     </div>
@@ -117,15 +120,15 @@
     <div class="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
       <p>© 2025 Abril Torres. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="#" class="hover:text-primary transition-colors">
-          Privacy Policy
-        </a>
-        <a href="#" class="hover:text-primary transition-colors">
-          Terms of Service
-        </a>
-        <a href="#" class="hover:text-primary transition-colors">
-          Shipping & Returns
-        </a>
+         <a href="#" class="hover:text-primary transition-colors">
+           Política de Privacidad
+         </a>
+         <a href="#" class="hover:text-primary transition-colors">
+           Términos de Servicio
+         </a>
+         <a href="#" class="hover:text-primary transition-colors">
+           Envío y Devoluciones
+         </a>
       </div>
     </div>
   </div>

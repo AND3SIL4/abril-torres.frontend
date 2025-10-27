@@ -3,30 +3,30 @@ const products = [
   {
     id: 1,
     name: "Luna Tote",
-    price: "$185",
+    price: "$185.000 COP",
     image: "/elegant-burgundy-tote-bag-recycled-fabric.jpg",
-    description: "Spacious everyday tote",
+     description: "Tote espacioso para el día a día",
   },
   {
     id: 2,
     name: "Stella Crossbody",
-    price: "$145",
+    price: "$145.000 COP",
     image: "/dusty-rose-crossbody-bag-sustainable-fabric.jpg",
-    description: "Compact and versatile",
+     description: "Compacto y versátil",
   },
   {
     id: 3,
     name: "Aurora Clutch",
-    price: "$95",
+    price: "$95.000 COP",
     image: "/cream-elegant-clutch-bag-recycled-material.jpg",
-    description: "Evening sophistication",
+     description: "Sofisticación nocturna",
   },
   {
     id: 4,
     name: "Nova Shoulder Bag",
-    price: "$165",
+    price: "$165.000 COP",
     image: "/muted-rose-shoulder-bag-eco-friendly.jpg",
-    description: "Classic silhouette",
+     description: "Silueta clásica",
   },
 ];
 ---
@@ -34,12 +34,12 @@ const products = [
 <section id="collection" class="py-20 md:py-32">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4">
-        Featured <span class="font-semibold text-primary">Collection</span>
-      </h2>
-      <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-        Each piece tells a story of transformation—from discarded fabrics to cherished accessories.
-      </p>
+       <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4">
+         <span class="font-semibold text-primary">Colección</span> Destacada
+       </h2>
+       <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+         Cada pieza cuenta una historia de transformación: de telas descartadas a accesorios apreciados.
+       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -57,9 +57,9 @@ const products = [
             <p class="text-sm text-muted-foreground mb-3">{product.description}</p>
             <div class="flex items-center justify-between">
               <span class="text-lg font-semibold text-primary">{product.price}</span>
-              <button class="text-sm px-4 py-2 text-primary hover:text-primary-foreground hover:bg-primary rounded-md transition-colors">
-                View Details
-              </button>
+               <button class="text-sm px-4 py-2 text-primary hover:text-primary-foreground hover:bg-primary rounded-md transition-colors">
+                 Ver Detalles
+               </button>
             </div>
           </div>
         </div>
@@ -67,9 +67,9 @@ const products = [
     </div>
 
     <div class="text-center mt-12">
-      <button class="px-8 py-3 text-base font-medium rounded-md border border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent transition-colors">
-        View All Products
-      </button>
+       <button class="px-8 py-3 text-base font-medium rounded-md border border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent transition-colors">
+         Ver Todos los Productos
+       </button>
     </div>
   </div>
 </section>
