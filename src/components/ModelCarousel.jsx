@@ -8,39 +8,35 @@ export default function ModelCarousel() {
   const models = [
     {
       id: 1,
-      src: '/models/test1.glb',
-      alt: 'Bolso Luna Tote en 3D',
-      name: 'Luna Tote',
-      description: 'Tote espacioso para el día a día'
+      src: '/models/salento-model.glb',
+      alt: 'Bolso Salento en 3D',
+      name: 'Salento',
+      description:
+        'Entre los paisajes del Quindio, donde el arte y la naturaleza se entrelazan, se inspira el lujo',
     },
     {
       id: 2,
-      src: '/models/test2.glb',
-      alt: 'Bolso Stella Crossbody en 3D',
-      name: 'Stella Crossbody',
-      description: 'Compacto y versátil'
+      src: '/models/villa-de-leiva-model.glb',
+      alt: 'Bolso Villa de Leiva (rojo) Crossbody en 3D',
+      name: 'Villa de Leiva (rojo)',
+      description:
+        'Rendimos honor a la tierra de Boyaca, transformamos la tradicion en elegancia',
     },
     {
       id: 3,
-      src: '/models/test3.glb',
-      alt: 'Bolso Aurora Clutch en 3D',
-      name: 'Aurora Clutch',
-      description: 'Sofisticación nocturna'
+      src: '/models/guatape-model.glb',
+      alt: 'Bolso Guatape en 3D',
+      name: 'Guatape',
+      description: 'Inspirado en las montanias de Antioquia, surgue la escencia que da vida nuestros bolsos',
     },
     {
       id: 4,
-      src: '/models/test4.glb',
-      alt: 'Bolso Nova Shoulder Bag en 3D',
-      name: 'Nova Shoulder Bag',
-      description: 'Silueta clásica'
+      src: '/models/villa-de-leiva-model-blue.glb',
+      alt: 'Bolso Villa de Leiva (azul) Crossbody en 3D',
+      name: 'Villa de Leiva (azul)',
+      description:
+        'Rendimos honor a la tierra de Boyaca, transformamos la tradicion en elegancia',
     },
-    {
-      id: 5,
-      src: '/models/test5.glb',
-      alt: 'Bolso especial en 3D',
-      name: 'Colección Especial',
-      description: 'Edición limitada'
-    }
   ];
 
   const nextModel = () => {
@@ -73,7 +69,7 @@ export default function ModelCarousel() {
             height: '600px',
             borderRadius: '8px',
             maxWidth: '800px',
-            margin: '0 auto'
+            margin: '0 auto',
           }}
           client:load
         />
@@ -125,9 +121,7 @@ export default function ModelCarousel() {
         <h4 className="text-xl font-semibold text-foreground mb-1">
           {currentModel.name}
         </h4>
-        <p className="text-muted-foreground">
-          {currentModel.description}
-        </p>
+        <p className="text-muted-foreground">{currentModel.description}</p>
       </div>
 
       {/* Dots Indicator */}

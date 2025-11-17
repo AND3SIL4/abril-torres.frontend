@@ -162,7 +162,7 @@ export default function ModelViewer({ src, alt, style }) {
         exposure="1"
         environment-image="neutral"
         disable-tap
-        orientation="180deg 0deg 0deg"
+        // orientation="180deg 0deg 0deg"
         style={{
           ...style,
           display: loading ? 'none' : 'block',

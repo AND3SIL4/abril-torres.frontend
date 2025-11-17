@@ -1,7 +1,7 @@
 ---
 // Footer component
 const instagramUrl = import.meta.env.PUBLIC_INSTAGRAM_URL || '#';
-const facebookUrl = import.meta.env.PUBLIC_FACEBOOK_URL || '#';
+const tiktokUrl = import.meta.env.PUBLIC_TIKTOK_URL || '#';
 const emailUrl = import.meta.env.PUBLIC_EMAIL_URL || '#';
 ---
 
@@ -18,7 +18,7 @@ const emailUrl = import.meta.env.PUBLIC_EMAIL_URL || '#';
           class="h-16 w-auto mb-4"
         />
          <p class="text-muted-foreground leading-relaxed mb-6 max-w-md">
-           Bolsos de lujo sostenible elaborados con telas recicladas. Cada pieza es un testimonio del diseño consciente y la elegancia atemporal.
+          Bolsos de lujo sostenible elaborados con telas recicladas. Cada pieza es un testimonio del diseño y elegancia atemporal.
          </p>
          <div class="flex gap-4">
            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" class="p-2 text-muted-foreground hover:text-primary transition-colors">
@@ -29,11 +29,11 @@ const emailUrl = import.meta.env.PUBLIC_EMAIL_URL || '#';
              </svg>
              <span class="sr-only">Instagram</span>
            </a>
-           <a href={facebookUrl} target="_blank" rel="noopener noreferrer" class="p-2 text-muted-foreground hover:text-primary transition-colors">
+           <a href={tiktokUrl} target="_blank" rel="noopener noreferrer" class="p-2 text-muted-foreground hover:text-primary transition-colors">
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+               <path d="M16.339 2c.218 1.357 1.345 2.459 2.744 2.583.022 2.065 0 4.14.033 6.205 0 .465.047.935.141 1.39a5.954 5.954 0 1 1-5.59-4.153h.44v2.499a3.477 3.477 0 1 0 2.194 3.254V2h2.038Z"/>
              </svg>
-             <span class="sr-only">Facebook</span>
+             <span class="sr-only">TikTok</span>
            </a>
            <a href={emailUrl} class="p-2 text-muted-foreground hover:text-primary transition-colors">
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -88,11 +88,6 @@ const emailUrl = import.meta.env.PUBLIC_EMAIL_URL || '#';
            </li>
            <li>
              <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
-               Artesanía
-             </a>
-           </li>
-           <li>
-             <a href="#" class="text-muted-foreground hover:text-primary transition-colors">
                Contáctanos
              </a>
            </li>
@@ -105,7 +100,7 @@ const emailUrl = import.meta.env.PUBLIC_EMAIL_URL || '#';
       <div class="max-w-md mx-auto text-center">
          <h3 class="text-2xl font-light mb-2 text-foreground">Mantente Enterado de las Ultimas Actualizaciones</h3>
          <p class="text-muted-foreground mb-6">
-           Suscríbete para recibir actualizaciones sobre nuevas colecciones y ofertas exclusivas.
+           Suscríbete para recibir actualizaciones sobre nuevas colecciones.
          </p>
         <form class="flex gap-2">
            <input type="email" placeholder="Ingresa tu correo electrónico" class="flex-1 px-4 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
