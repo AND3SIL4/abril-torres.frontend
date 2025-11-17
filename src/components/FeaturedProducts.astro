@@ -4,34 +4,34 @@
 const products = [
   {
     id: 1,
-    name: 'Luna Tote',
-    price: '$185.000 COP',
-    image: '/images/elegant-burgundy-tote-bag-recycled-fabric.jpg',
-    description: 'Tote espacioso para el día a día',
-  },
-  {
-    id: 2,
-    name: 'Stella Crossbody',
-    price: '$145.000 COP',
-    image: '/images/dusty-rose-crossbody-bag-sustainable-fabric.jpg',
-    description: 'Compacto y versátil',
+    name: 'Salento (verde)',
+    price: '$604.500 COP',
+    image: '/images/salento-green.webp',
+    description: 'Entre los paisajes del Quindio, donde el arte y la naturaleza se entrelazan, se inspira el lujo',
   },
   {
     id: 3,
-    name: 'Aurora Clutch',
-    price: '$95.000 COP',
-    image: '/images/cream-elegant-clutch-bag-recycled-material.jpg',
-    description: 'Sofisticación nocturna',
+    name: 'Villa de Leiva (rojo)',
+    price: '$710.100 COP',
+    image: '/images/villa-de-leiva-red.webp',
+    description: 'Rendimos honor a la tierra de Boyaca, transformamos la tradicion en elegancia',
+  },
+  {
+    id: 2,
+    name: 'Salento (rojo)',
+    price: '$604.500 COP',
+    image: '/images/salento-red.webp',
+    description: 'Entre los paisajes del Quindio, donde el arte y la naturaleza se entrelazan, se inspira el lujo',
   },
   {
     id: 4,
-    name: 'Nova Shoulder Bag',
-    price: '$165.000 COP',
-    image: '/images/muted-rose-shoulder-bag-eco-friendly.jpg',
-    description: 'Silueta clásica',
+    name: 'Guatape (rosa)',
+    price: '$555.400 COP',
+    image: '/images/guatape-pink.webp',
+    description: 'Inspirado en las montanias de Antioquia, surgue la escencia que da vida nuestros bolsos',
   },
 ];
-import ModelViewer from './ModelViewer.jsx';
+import ModelCarousel from './ModelCarousel.jsx';
 ---
 
 <section id="collection" class="py-20 md:py-32">
@@ -50,21 +50,16 @@ import ModelViewer from './ModelViewer.jsx';
        </p>
      </div>
 
-     <!-- 3D Model Viewer Section -->
-     <div class="mb-16">
-       <div class="text-center mb-8">
-         <h3 class="text-2xl md:text-3xl font-light mb-4">Explora en 3D</h3>
-         <p class="text-muted-foreground">Descubre nuestros diseños desde todos los ángulos</p>
-       </div>
-        <div class="max-w-4xl mx-auto">
-          <ModelViewer
-            src="/models/test.glb"
-            alt="Bolso azul en 3D"
-            style="width: 100%; height: 1200px; border-radius: 8px;"
-            client:load
-          />
+      <!-- 3D Model Carousel Section -->
+      <div class="mb-16">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl md:text-3xl font-light mb-4">Explora colecciones exclusivas en 3D</h3>
+          <p class="text-muted-foreground">Descubre nuestros diseños desde todos los ángulos</p>
         </div>
-     </div>
+         <div class="max-w-4xl mx-auto">
+           <ModelCarousel client:load />
+         </div>
+      </div>
 
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
       {
